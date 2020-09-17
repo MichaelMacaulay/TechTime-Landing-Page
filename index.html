@@ -12,19 +12,9 @@
     
 </head>
     <body>
-    <form method="POST" action="<?php
-    // Create simple message & email
-    $email_to = 'michaelmacaulay33@gmail.com';
-    $subject = 'Here is your download!';
-    $message = "You will be a programming pro in no time! Thanks so much for joining the email list.";
-    $headers = "From: techtimedev@gmail.com";
-        if ( mail($email_to, $subject, $message, $headers) )
-            echo 'success';
-        else
-            echo 'not sent';
-    ?>" >
+    <form method="POST" action="mailThis.php" >
     <label for="name">Enter your name</label><br>
-        <input required type="text" id="name" name="name" value=""><br>
+        <input required type="text" method="POST" id="name" name="name" value=""><br>
         <label for="email">Enter your email</label><br>
         <input required type="email" id="email" name="email" value=""><br>
         <input type="submit" id="submit" value="Submit">
