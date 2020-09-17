@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php 
 
 // $_POST["name"]; = 'userName';
@@ -16,3 +19,6 @@ $headers = array(
 mail($_POST["email"], $subject, $message, $headers);
 
 ?>
+
+</body>
+</html>
