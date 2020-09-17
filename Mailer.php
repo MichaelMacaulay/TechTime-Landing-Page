@@ -1,21 +1,19 @@
 <?php
 
-require_once('PHPMailer/PHPMailerAutoload.php');
-
+// Create simple message & email
 $email_to = 'michaelmacaulay33@gmail.com';
+$subject = 'Here is your download!';
+$message = "You will be a programming pro in no time! \n\n Thanks so much for joining the email list.";
 
-$email_from = 'TechTimeDev@gmail.com';
 
-$email_subject = 'Here is your download!';
+// Create the email headers including the from
+$headers = "From: TechTime <techtimedev@gmail.com.me>";
 
-$email_body = 'You will be a programming pro in no time! Thanks so much for joining the email list.';
-
-$headers = "From: $email_from \r\n";
-
-mail($to,$email_subject,$email_body,$headers);
-
-header("Location: index.html");
-
+// Send the email to the user
+    if ( mail($email_to, $subject, $message, $headers) )
+        echo 'success';
+    else
+        echo 'not sent';
 
 
 ?>
