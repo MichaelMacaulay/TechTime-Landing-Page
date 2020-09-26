@@ -1,46 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Programming on TechTime's Email List</title>
-    <meta name="description" content="Get access to the best programming courses & resources to get you a job.">
-    <link rel="stylesheet" href="styles.css">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Master Programming - TechTime Email List</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">	
+        <link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="tectimeicon.png">
+	</head>
+	<body class="is-preload">
 
-        
+		<!-- Header -->
+			<header id="header">
+				<h1>TechTime Email List</h1>
+				<p>The best programming resources right in your inbox.</p>
+			</header>
 
-    
-</head>
-    <body>
-        <form  action="javascript:submit()" method="post">
-    <label for="name">Enter your name</label><br>
-        <input required type="text" id="name" name="name" value=""><br>
-        <label for="email">Enter your email</label><br>
-        <input required type="email" id="email" name="email" value=""><br>
-        <input type="submit" id="submit" value="Submit">
+        <form id="signup-form"  action="javascript:submit()" method="post">
+    <!-- <label for="name"></label><br> -->
+        <input placeholder="name" required type="text" for="name" id="name" name="name" value=""><br>
+        <!-- <label for="email"></label><br> -->
+        <input placeholder="Email" required type="email" id="email" for="email" name="email" value=""><br>
+        <input type="submit" id="submit" class="submitButton" value="Submit">
     </form>
-    </body>
+    </body> 
 
-    <script>
-    function submit (){
-    var sheetName = "TechTimeEmailList" //enter the sheet name
-    var sheetId = "1IjTP1o3k2AY1hGkU6_YsKTQHFCcEzxSo-iS1UNkwDCk" //enter the sheet id
-    var apiKey = "Pe5j22JLhE4gR2OsQIKYC7XFZSYIP_eAjFHna6LdJrcSEdHIJUNDjk8WeXU"
-    document.getElementById("submit").value = "Loading..."
-    var email = document.getElementById("email").value
-        var name = document.getElementById("name").value
-        fetch("https://api.sheetson.com/v2/sheets/"+sheetName,{
-        method:"POST",
-        headers:{
-            "Authorization": "Bearer "+apiKey,
-            "X-Spreadsheet-Id": sheetId,
-            "Content-Type":"application/json"
-        },
-        body: JSON.stringify({name,email})
-        }).then(result=>{
-        console.log(result)
-        document.getElementById("submit").value = "Thank You!"
-        })
-    }
-    </script>
-    </html>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/TechTimeDev" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCWK-xs87g5iroSM2j5YWqRg?view_as=subscriber" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+					<li><a href="https://github.com/MichaelMacaulay" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://medium.com/@Michael_Macaulay" class="icon brands fa-medium"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; TechTime</li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+            <script type='text/javascript' src="assets/js/config.js"></script>
+            <script type='text/javascript' src="assets/js/main.js"></script>
+            <script type='text/javascript' src="assets/js/sheets.js"></script>
+
+	</body>
+</html>
